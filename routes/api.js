@@ -150,7 +150,7 @@ async function limitapikey(apikey) {
       //Area Admin
 
 // Add Premium
-app.get('/addpremium', async (req, res, params) => {
+router.get('/addpremium', async (req, res, params) => {
   const username = req.query.username;
   const passAdmin = req.query.pass;
 
@@ -176,7 +176,7 @@ app.get('/addpremium', async (req, res, params) => {
 });
 
 //limit
-app.get('/limit', async (req, res, params) => {
+router.get('/limit', async (req, res, params) => {
   const username = req.query.username;
   const limit = req.query.limit;
   const passAdmin = req.query.pass
