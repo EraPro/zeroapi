@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
     limitApikey: {
          type: Number 
     },
+    premium: {
+         type: Boolean,
+      default: false,
+    },
 });
 
 module.exports = mongoose.model('user', userSchema);
