@@ -203,7 +203,7 @@ router.get('/limit', async (req, res, params) => {
 });
 
 // Del Premium
-app.get('/delpremium', async (req, res, params) => {
+router.get('/delpremium', async (req, res, params) => {
   const username = req.query.username;
   const passAdmin = req.query.pass;
 
