@@ -434,8 +434,8 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <marquee class="qon" id="pedofil" direction="left" onmouseover="stop()" onmouseout="start()"></marquee>
-                <img class="img-profile rounded-circle" src="http://studiovdk.herokuapp.com/api/tentang/images/vhekr.gif" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Guest</span>
+                <img class="img-profile rounded-circle" src="https://g.top4top.io/p_2613gcwab0.png" style="max-width: 60px">
+                <span class="ml-2 d-none d-lg-inline text-white small"></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="http://html">
@@ -453,8 +453,7 @@
               <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
                 <a class="dropdown-item d-flex align-items-right" href="#">
                   <div>
-                    <center>
-                    <iframe src="https://www5.cbox.ws/box/?boxid=928423&boxtag=iwgGdE" width="100%" height="480" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                    <center><iframe src="https://www5.cbox.ws/box/?boxid=941506&boxtag=dLZcUR" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
                   </center>
                   </div>
                 </a>
@@ -576,7 +575,7 @@
                         </div>
                       </span>
                       <div class="mt-2 mb-0 text-muted text-xs">
-                        <span id="lucast">Load</span><p id="speed-test"></p>
+                        <span id="lucast">Limit dan Request</span><p id="speed-test">Limit : <%= limit %> | Request : <%= RequestToday %></p>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -824,7 +823,36 @@ body {
                     <div class="col mr-2">
                       <h6 class="m-0 font-weight-bold text-primary">PAPAN PENGUMUMAN</h6>
                       <div class="mt-2 mb-0 text-muted text-xs">
-                        <p>TIDAK ADA PENGUMUMAN</p>
+                        <p><span>Username: <%= username %><br></span>
+                                        <% if(!verified){ %>
+                                            <span class="h5 mb-0 font-weight-bold">Not Verified❌<br></span>
+
+                                            <% }else{ %>
+                                                <span class="h5 mb-0 font-weight-bold">Verified✔️<br></span>
+                                            <% } %>
+</p>
+
+                <% if(!verified){ %>
+                    <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                      <strong>ATTENTION !</strong> Please verify your account to continue using our services.
+                      <a href="/send-verification-email">Re-send Verification Email</a>
+                    </div>
+                    <% } %>
+
+                    <% if( error_messages !="" ){ %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong> ALERT</strong>
+                            <%= error_messages %>.
+                        </div>
+                        <% } %>
+              
+                        <% if( success_messages !="" ){ %>
+                          <div class="alert alert-success alert-dismissible fade show" role="alert">
+                              <strong> SUCCESS</strong>
+                              <%= success_messages %>.
+                          </div>
+                          <% } %>
+
                       </div>
                     </div>
                   </div>
@@ -924,7 +952,7 @@ body {
               <div class="copyright text-center my-auto">
                 <span>copyright © <script>
                     document.write(new Date().getFullYear());
-                  </script> - developed by <b><a href="#" target="_blank">V i k o d e v</a></b>
+                  </script> - developed by <b><a href="#" target="_blank">Z E R O D E V Template By Viko</a></b>
                 </span>
               </div>
             </div>
@@ -942,17 +970,7 @@ body {
       <script src="vendor/datatables/jquery.dataTables.min.js"></script>
       <script src="js/ruang-admin.js"></script>
       <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=7ae7e40116347' async='true'></script> 
-      <script type="text/javascript">
-        window.$crisp = [];
-        window.CRISP_WEBSITE_ID = "1c7170fa-cbdb-498a-ba0d-9e6b1ea52df9";
-        (function() {
-          d = document;
-          s = d.createElement("script");
-          s.src = "https://client.crisp.chat/l.js";
-          s.async = 1;
-          d.getElementsByTagName("head")[0].appendChild(s);
-        })();
-      </script>
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="039e42a3-1c59-4718-89f9-67f36a18118b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
       <script>
         document.addEventListener("DOMContentLoaded", function() {
           vikoapi();
