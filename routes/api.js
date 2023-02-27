@@ -335,7 +335,7 @@ router.get('/api/dowloader/yt', cekKey, async (req, res, next) => {
 	   })
 })
 
-router.get('/api/dowloader/soundcloud', cekKey, async (req, res, next) => {
+router.get('/api/dowloader/soundcloud', premium, async (req, res, next) => {
 	var url = req.query.url
 	if (!url ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})   
 	
