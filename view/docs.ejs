@@ -21,7 +21,7 @@
   <meta charset="utf-8">
   <meta property="og:image" content="https://i.ibb.co/QNJVy2s/4-K-Loopable-Abstract-Color-Gradient-Background-Animation.jpg">
   <link rel="icon" type="image/png" href="https://i.ibb.co/QNJVy2s/4-K-Loopable-Abstract-Color-Gradient-Background-Animation.jpg">
-  <meta name="keywords" content="VikoAPI, viko-api, Free rest api, viko docs, vikodk67, zahir api, tobz api, studiovdk, programing unpas, studiovdk entertainment">
+  <meta name="keywords" content="ZeroApi, Free rest api, viko docs, vikodk67, zahir api, tobz api, studiovdk, programing unpas, studiovdk entertainment">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="free rest api viko beta version">
@@ -641,18 +641,19 @@
               </div>
             </div>
             <div class="col-xl-5 col-md-6 mb-4">
-              <form action="/api/cekapikey">
+              <form action="/customapikey" method="GET">
                 <div class="card h-100">
                   <div class="card-body">
                     <div class="row align-items-center">
                       <div class="col mr-2">
                         <i class="fas fa-fw fa-key"></i>
                         <div class="h6 mb-0 font-weight-bold text-dark-800 text-uppercase">
-                          <div class="text-xs font-weight-bold text-uppercase mb-1">CEK APIKEY</div>
+                          <div class="text-xs font-weight-bold text-uppercase mb-1">Custom Apikey (Premium)</div>
                         </div>
-                        <input type="password" class="form-control" placeholder="Check Your apikey" name="apikey" required=""><br>
+                        <input type="hidden" class="form-control" placeholder="Check Your apikey" name="username" id="username" required="" value="<%= username %>"><br>
+                        <input type="text" class="form-control" placeholder="Check Your apikey" name="apikey" required=""><br>
                         <button class="btn btn-danger btn-icon-split">
-                          <span class="text">CHECK</span>
+                          <span class="text">Custom</span>
                         </button>
                       </div>
                     </div>
@@ -831,6 +832,16 @@ body {
                                                 <span class="h5 mb-0 font-weight-bold">Verified✔️<br></span>
                                             <% } %>
 </p>
+  <p>
+                                        <% if(!premium){ %>
+                                            <span class="h5 mb-0 font-weight-bold">Not Premium❌<br></span>
+
+                                            <% }else{ %>
+                                                <span class="h5 mb-0 font-weight-bold">Premium✔️<br></span>
+                                            <% } %>
+</p>
+
+
 
                 <% if(!verified){ %>
                     <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
@@ -871,7 +882,7 @@ body {
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>DIUPDATE BANK</p>
+                  <p>Belum Buat</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
