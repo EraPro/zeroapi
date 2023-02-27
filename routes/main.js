@@ -52,7 +52,7 @@ router.get('/', (req, res) => {
 router.get('/docs',  checkAuth, async (req, res) => {
   let getinfo =  await getApikey(req.user.id)
   let { apikey, username, checklimit, isVerified , RequestToday } = getinfo
-    res.render("docs", { username: username, verified: isVerified, apikey: apikey, limit: checklimit , RequestToday: RequestToday });
+    res.render("docs", { username: username, verified: isVerified, apikey: apikey, limit: checklimit , RequestToday: RequestToday, premium: premium });
     
 });
 
