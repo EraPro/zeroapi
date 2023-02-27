@@ -26,7 +26,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="free rest api viko beta version">
   <meta name="author" content="V i k o d e v">
-  <title>VikoAPI</title>
+  <title>ZeroApi | <%= username %></title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
@@ -962,7 +962,12 @@ body {
           </footer>
       </div>
       <!-- Scroll to top -->
-      <script async="" src="https://api.countapi.xyz/hit/studiovdk.herokuapp.com/visits?callback=cb"></script>
+       <script>
+        
+        $.getJSON("https://api.countapi.xyz/hit/api.zeroindo.eu.org/visits", function(response) {
+    $("#visits").text(response.value);
+});
+        
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
